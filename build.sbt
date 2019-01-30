@@ -5,11 +5,6 @@ resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/hubsvc-i
   scalaVersion := "2.12.8"
   chuckRegion := "eu-west-1"
 
-credentials += Credentials(credentialsLocation.asFile)
-val credentialsLocation: RichFile =
- sys.props.get(“credentials.location”).map(Path(_)).getOrElse(Path.userHome / “.ivy2" / “.credentials”)
-
-
 libraryDependencies ++= Seq(
   "com.itv.chuckwagon" %% "chuckwagon-jvm" % "0.1.4-SNAPSHOT"
 )
