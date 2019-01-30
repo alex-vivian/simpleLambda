@@ -1,13 +1,14 @@
-resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/hubsvc-ivy"
+resolvers += "OASVC Artifactory" at "http://itvrepos.jfrog.io/itvrepos/oasvc-ivy"
 
-credentials += Credentials(credentialsLocation.asFile)
 val credentialsLocation: RichFile =
- System.getProperty(“credentials.location”)
+  sys.props.get(“credentials.location”).map(Path(_)).getOrElse(Path.userHome / “.ivy2" / “.credentials”)
+ 
+credentials += Credentials(credentialsLocation.asFile)
 
-  name := "simpleLambda"
-  version := "0.1"
-  scalaVersion := "2.12.8"
-  chuckRegion := "eu-west-1"
+name := "simpleLambda"
+version := "0.1"
+scalaVersion := "2.12.8"
+chuckRegion := "eu-west-1"
 
 libraryDependencies ++= Seq(
   "com.itv.chuckwagon" %% "chuckwagon-jvm" % "0.1.4-SNAPSHOT"
