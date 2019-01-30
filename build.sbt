@@ -5,9 +5,7 @@ val credentialsLocation: RichFile =
  sys.props(“credentials.location”)
 
  myTask := {
-  val log = streams.value.log
-  val propertyFoo = System.getProperty("foo")
-  log.info(s"property foo = $propertyFoo")
+  println("hello")
 }
   name := "simpleLambda"
   version := "0.1"
