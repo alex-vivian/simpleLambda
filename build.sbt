@@ -2,7 +2,7 @@ resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/hubsvc-i
 
 credentials += Credentials(credentialsLocation.asFile)
 val credentialsLocation: RichFile =
- sys.props(“credentials.location”)
+ System.getProperty(“credentials.location”)
 
  myTask := {
   println("hello")
