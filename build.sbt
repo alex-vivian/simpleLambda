@@ -1,7 +1,8 @@
 resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/hubsvc-ivy"
 
 credentials += Credentials(credentialsLocation.asFile)
-val credentialsLocation: RichFile = Path.userHome / “.ivy2” / “.credentials”
+val credentialsLocation: RichFile =
+ sys.props.get(“credentials.location”)
 
   name := "simpleLambda"
   version := "0.1"
