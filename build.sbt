@@ -4,10 +4,11 @@ credentials += Credentials(credentialsLocation.asFile)
 val credentialsLocation: RichFile =
  sys.props(“credentials.location”)
 
- val log = streams.value.log
- val propertyFoo = System.getProperty(“foo”)
- log.info(s”property foo = $propertyFoo”)
-
+ myTask := {
+  val log = streams.value.log
+  val propertyFoo = System.getProperty("foo")
+  log.info(s"property foo = $propertyFoo")
+}
   name := "simpleLambda"
   version := "0.1"
   scalaVersion := "2.12.8"
