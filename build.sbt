@@ -1,4 +1,4 @@
-resolvers += "OASVC Artifactory" at "http://itvrepos.jfrog.io/itvrepos/oasvc-ivy"
+resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/oasvc-ivy"
 
 //val credentialsLocation: RichFile =
   //sys.props.get(“credentials.location”).map(Path(_)).getOrElse(Path.userHome / “.ivy2" / “.credentials”)
