@@ -5,6 +5,8 @@ resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/oasvc-iv
   scalaVersion := "2.12.8"
   chuckRegion := "eu-west-1"
 
+credentials += Credentials(credentialsLocation.asFile)
+val credentialsLocation: RichFile = Path.userHome / “.ivy2” / “.credentials”
 
 
 libraryDependencies ++= Seq(
