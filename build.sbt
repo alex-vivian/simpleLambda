@@ -1,4 +1,4 @@
-resolvers += "HUBSVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/oasvc-ivy"
+resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/oasvc-ivy"
 
   name := "simpleLambda"
   version := "0.1"
