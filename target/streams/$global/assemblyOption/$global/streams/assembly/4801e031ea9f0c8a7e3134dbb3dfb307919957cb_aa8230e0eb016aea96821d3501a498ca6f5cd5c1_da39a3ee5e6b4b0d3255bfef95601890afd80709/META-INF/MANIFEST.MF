@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: jvm
+Implementation-Version: 0.1.4-SNAPSHOT
+Specification-Vendor: com.itv.chuckwagon
+Specification-Title: jvm
+Implementation-Vendor-Id: com.itv.chuckwagon
+Specification-Version: 0.1.4-SNAPSHOT
+Implementation-URL: http://io.itv.com/chuckwagon/
+Implementation-Vendor: com.itv.chuckwagon
+
