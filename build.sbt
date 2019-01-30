@@ -4,9 +4,6 @@ credentials += Credentials(credentialsLocation.asFile)
 val credentialsLocation: RichFile =
  System.getProperty(“credentials.location”)
 
- myTask := {
-  println("hello")
-}
   name := "simpleLambda"
   version := "0.1"
   scalaVersion := "2.12.8"
