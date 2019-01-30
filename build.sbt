@@ -2,7 +2,7 @@ resolvers += "OASVC Artifactory" at "https://itvrepos.jfrog.io/itvrepos/hubsvc-i
 
 credentials += Credentials(credentialsLocation.asFile)
 val credentialsLocation: RichFile =
- sys.props.get(“credentials.location”)
+ sys.props(“credentials.location”)
 
   name := "simpleLambda"
   version := "0.1"
